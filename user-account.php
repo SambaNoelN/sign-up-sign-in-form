@@ -14,24 +14,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
 
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = 'Invalid email format';
-      
+        $errors['email'] = '<p style="color: red;">Invalid email format</p>';
     }
-    if(empty($name)){
-        $errors['name']='Name is required';
     }
     if (strlen($password) < 8 ) {
-        $errors['password'] = 'Password must be at least 8 characters long.';
+        $errors['password'] = '<p style="color: red;">Password must be at least 8 characters long.</p>';
     }
 
     if ($password !== $confirmPassword) {
-        $errors['confirm_password'] = 'Passwords do not match';
+        $errors['confirm_password'] = '<p style="color: red;">Passwords do not match</p>';
     }
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
     $stmt->execute(['email' => $email]);
     if ($stmt->fetch()) {
-        $errors['user_exist'] = 'Email is already registered';
+        $errors['user_exist'] = '<p style="color: red;">Email is already registered</p>';
     }
 
     if (!empty($errors)) {
