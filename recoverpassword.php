@@ -5,8 +5,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Replace with your database connection
-        $conn =mysqli_connect('localhost', 'root', '', 'your_database');
+        
+        $conn =mysqli_connect('localhost', 'root', '', 'test1');
         if ($conn->connect_error) {
             die('Database connection failed: ' . $conn->connect_error);
         }
