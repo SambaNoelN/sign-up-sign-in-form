@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
         $errors['confirm_password'] = '<p style="color: red;">Passwords do not match</p>';
     }
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt =$conn->prepare("SELECT * FROM users WHERE email = :email");
     $stmt->execute(['email' => $email]);
     if ($stmt->fetch()) {
         $errors['user_exist'] = '<p style="color: red;">Email is already registered</p>';
@@ -43,8 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
 
     header('Location: index.php');
     exit();
-}
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);

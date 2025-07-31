@@ -7,7 +7,7 @@
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
-CREATE DATABASE test1;
+CREATE DATABASE admin;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,10 +27,9 @@ SET time_zone = "+00:00";
 
 --
 -- Table structure for table `users`
---
-create DATABASE admin;
 
-CREATE TABLE `user1` (
+
+CREATE TABLE `users` (
   `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `password` varchar(300) NOT NULL,

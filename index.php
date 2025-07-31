@@ -55,7 +55,7 @@ if (isset($_SESSION['errors'])) {
         ?>
       </div>
       <p class="recover">
-        <a href="#">Recover Password</a>
+        <a href="recoverpassword.php">Recover Password</a>
       </p>
       <input type="submit" class="btn" value="Sign In" name="signin">
     </form>

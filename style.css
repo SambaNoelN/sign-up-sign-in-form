@@ -5,8 +5,8 @@
     font-family:"poppins",sans-serif;
 }
 body{
-    / background-color: #c9d6ff;
-    background:linear-gradient(to right,#e2e2e2,#c9d6ff); */
+    background-color: #c9d6ff;
+    background:linear-gradient(to right,#e2e2e2,#0d3cd9); */
 }
 .container{
     background:#fff;
@@ -43,11 +43,11 @@ input:focus{
 .input-group{
     padding:1% 0;
     position:relative;
-   background-color:hsla(227, 63%, 18%, 0.07);
-margin:1em auto;
-border-radius:12px;
-display:flex;
-padding:0.7em 0.1em;
+    background-color:hsla(227, 63%, 18%, 0.07);
+    margin:1em auto;
+    border-radius:12px;
+    display:flex;
+    padding:0.7em 0.1em;
 
 }
 .error{
