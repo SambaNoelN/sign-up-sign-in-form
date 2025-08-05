@@ -1,4 +1,4 @@
--- Active: 1753799779446@@127.0.0.1@3306@test1
+
 <?php
 
 session_start();
@@ -63,7 +63,7 @@ if (isset($_SESSION['errors'])) {
       ----------or--------
     </p>
     <div class="icons">
-      <i class="fab fa-google"></i>
+      <i class="fab fa-google"><a href="google-login.php" ></a></i>
       <i class="fab fa-facebook"></i>
     </div>
     <div class="links">

@@ -1,3 +1,4 @@
+-- Active: 1753799779446@@127.0.0.1@3306@admin
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
@@ -7,7 +8,7 @@
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
-CREATE DATABASE admin;
+CREATE DATABASE Admin;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+use Admin;
 --
 -- Table structure for table `users`
 
@@ -49,7 +50,7 @@ CREATE TABLE `users` (
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `user1`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,7 +60,7 @@ ALTER TABLE `user1`
 --
 -- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user1`
+ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 

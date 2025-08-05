@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         
-        $conn =mysqli_connect('localhost', 'root', '', 'test1');
+        $conn =mysqli_connect('localhost', 'root', '', 'Admin');
         if ($conn->connect_error) {
             die('Database connection failed: ' . $conn->connect_error);
         }
@@ -39,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,15 +50,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container" id="signup">
-    <h2>Recover Password</h2>
-    <?php if (!empty($message)) echo "<p>$message</p>"; ?>
+    <h2 class="form-title">Recover Password</h2>
+    
     <form method="post" action="">
         <div class="input-group">
         <i class="fas fa-envelope"></i>
-        <input type="email" name="email" id="email" required><br><br>
+        <input type="email" name="email" id="email" placeholder="Email" required><br><br>
         </div>
+        <div style="color: red;">
+      <i class="fas fa-bullet"></i> <?php if (!empty($message)) echo "<p>$message</p>"; ?>
+    </div>
         <button type="submit" class="btn">Send Recovery Link</button>
+    
     </form>
+    
     </div>
 </body>
 </html>
